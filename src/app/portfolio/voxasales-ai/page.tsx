@@ -1,10 +1,71 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function VoxaSalesAIPage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const projectImages = [
+    {
+      src: '/images/voxasales-ai/homepage.png',
+      title: 'Platform Homepage',
+      description: 'Main VoxaSales AI platform overview and entry point'
+    },
+    {
+      src: '/images/voxasales-ai/agentdashboard.png',
+      title: 'Agent Dashboard',
+      description: 'Main interface for agents with call statistics and performance metrics'
+    },
+    {
+      src: '/images/voxasales-ai/sales_assitentd_durin_call.png',
+      title: 'Live AI Assistance',
+      description: 'Real-time AI suggestions and guidance during active calls'
+    },
+    {
+      src: '/images/voxasales-ai/sales_assitent_thinking.png',
+      title: 'AI Processing Engine',
+      description: 'Behind-the-scenes AI analysis and response generation'
+    },
+    {
+      src: '/images/voxasales-ai/agent_phone.png',
+      title: 'Integrated Softphone',
+      description: 'Built-in calling interface with AI assistance integration'
+    },
+    {
+      src: '/images/voxasales-ai/personal_stats.png',
+      title: 'Performance Analytics',
+      description: 'Detailed personal and team performance statistics'
+    },
+    {
+      src: '/images/voxasales-ai/CRM_integrations.png',
+      title: 'CRM Integration',
+      description: 'Seamless integration with popular CRM platforms'
+    },
+    {
+      src: '/images/voxasales-ai/postcall_features.png',
+      title: 'Post-Call Features',
+      description: 'AI-generated summaries and follow-up suggestions'
+    },
+    {
+      src: '/images/voxasales-ai/agent_phone_agenda.png',
+      title: 'Call Scheduling',
+      description: 'Integrated agenda and appointment management'
+    }
+  ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % projectImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length);
+  };
+
+  const goToImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black relative overflow-hidden">
       {/* Background layers */}
@@ -45,9 +106,21 @@ export default function VoxaSalesAIPage() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
               VoxaSales AI
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Advanced AI-powered conversational assistant for sales teams, providing real-time support during calls with intelligent response suggestions and client memory.
             </p>
+            
+            {/* Hero Image */}
+            <div className="max-w-4xl mx-auto mb-8">
+              <div className="bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80 backdrop-blur-xl rounded-2xl border border-white/10 p-4 hover:border-violet-400/30 transition-all duration-300">
+                <img 
+                  src="/images/voxasales-ai/homepage.png" 
+                  alt="VoxaSales AI Platform Overview"
+                  className="w-full h-auto rounded-xl shadow-2xl"
+                />
+              </div>
+            </div>
+            
             <div className="flex items-center justify-center gap-6 mt-8">
               <span className="px-4 py-2 bg-violet-600/20 border border-violet-400/30 rounded-full text-violet-300 text-sm">
                 AI & SaaS
@@ -514,7 +587,7 @@ export default function VoxaSalesAIPage() {
             </div>
           </motion.div>
 
-          {/* Project Images Section (Placeholder for future images) */}
+          {/* Enhanced Project Visuals with Image Carousel */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -525,32 +598,127 @@ export default function VoxaSalesAIPage() {
               Project Visuals
             </h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Placeholder image containers - you can replace these with actual images */}
-              {[
-                { title: 'Dashboard Interface', description: 'Main control panel for sales managers' },
-                { title: 'Agent Live View', description: 'Real-time assistance interface for agents' },
-                { title: 'Analytics Dashboard', description: 'Comprehensive performance analytics' },
-                { title: 'Client Memory System', description: 'Contextual client history interface' },
-                { title: 'Response Generation', description: 'AI-powered suggestion engine' },
-                { title: 'Integration Setup', description: 'CRM and VOIP integration panel' }
-              ].map((placeholder, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover:border-violet-400/30 transition-all duration-300">
-                  <div className="w-full h-48 bg-gradient-to-br from-violet-600/20 to-indigo-600/20 rounded-xl flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <div className="text-4xl mb-2">📷</div>
-                      <p className="text-gray-400 text-sm">Image placeholder</p>
-                    </div>
+            {/* Main Image Display */}
+            <div className="max-w-6xl mx-auto mb-8">
+              <div className="bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover:border-violet-400/30 transition-all duration-300">
+                {/* Image Container */}
+                <div className="relative group">
+                  <div className="w-full h-[500px] bg-gradient-to-br from-violet-600/10 to-indigo-600/10 rounded-xl overflow-hidden mb-6">
+                    <img 
+                      src={projectImages[currentImageIndex].src}
+                      alt={projectImages[currentImageIndex].title}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{placeholder.title}</h3>
-                  <p className="text-gray-300 text-sm">{placeholder.description}</p>
+                  
+                  {/* Navigation Arrows */}
+                  <button
+                    onClick={prevImage}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  
+                  <button
+                    onClick={nextImage}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
-              ))}
+                
+                {/* Image Info */}
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-white mb-2">{projectImages[currentImageIndex].title}</h3>
+                  <p className="text-gray-300 mb-4">{projectImages[currentImageIndex].description}</p>
+                  <div className="text-sm text-gray-400">
+                    {currentImageIndex + 1} of {projectImages.length}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Thumbnail Navigation */}
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 gap-4">
+                {projectImages.map((image, index) => (
+                  <motion.button
+                    key={index}
+                    onClick={() => goToImage(index)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`relative group overflow-hidden rounded-lg border-2 transition-all duration-300 ${
+                      currentImageIndex === index 
+                        ? 'border-violet-400 shadow-lg shadow-violet-400/30' 
+                        : 'border-gray-600 hover:border-gray-400'
+                    }`}
+                  >
+                    <div className="w-full h-20 bg-gradient-to-br from-violet-600/10 to-indigo-600/10">
+                      <img 
+                        src={image.src}
+                        alt={image.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {/* Overlay */}
+                    <div className={`absolute inset-0 transition-opacity duration-300 ${
+                      currentImageIndex === index 
+                        ? 'bg-violet-500/20' 
+                        : 'bg-black/20 group-hover:bg-black/10'
+                    }`} />
+                    {/* Active Indicator */}
+                    {currentImageIndex === index && (
+                      <div className="absolute top-1 right-1 w-3 h-3 bg-violet-400 rounded-full shadow-lg"></div>
+                    )}
+                  </motion.button>
+                ))}
+              </div>
+            </div>
+            
+            {/* Navigation Controls */}
+            <div className="flex justify-center items-center gap-4 mt-8">
+              <button
+                onClick={prevImage}
+                className="px-6 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-500 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-violet-500/30 flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Previous
+              </button>
+              
+              <div className="flex items-center gap-2">
+                {projectImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToImage(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      currentImageIndex === index 
+                        ? 'bg-violet-400 scale-125' 
+                        : 'bg-gray-600 hover:bg-gray-400'
+                    }`}
+                  />
+                ))}
+              </div>
+              
+              <button
+                onClick={nextImage}
+                className="px-6 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-500 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-violet-500/30 flex items-center gap-2"
+              >
+                Next
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
             
             <div className="text-center mt-8">
-              <p className="text-gray-400 italic">
-                * Project images and screenshots will be added as development progresses
+              <p className="text-gray-300">
+                📸 Showcasing real VoxaSales AI interface screenshots and platform features
               </p>
             </div>
           </motion.div>
