@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Scene3D from '../components/scene-3d';
-import FloatingCard from '../components/floating-card';
 import HomeBackground from '../components/home-background';
 
 export default function Home() {

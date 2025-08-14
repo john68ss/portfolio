@@ -108,12 +108,12 @@ export default function ContactPage() {
             className="text-center mb-20"
           >
             <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-gray-100 via-violet-200 to-purple-300 bg-clip-text text-transparent tracking-tight">
-              Let's Connect
+              Let&apos;s Connect
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Ready to collaborate on{' '}
               <span className="text-violet-400 font-semibold">innovative projects</span>? 
-              Let's discuss how we can work together to create{' '}
+              Let&apos;s discuss how we can work together to create{' '}
               <span className="text-purple-400 font-semibold">extraordinary digital experiences</span>{' '}
               and cutting-edge technological solutions.
             </p>
@@ -313,7 +313,7 @@ export default function ContactPage() {
                   { status: 'On-site projects', available: true },
                   { status: 'Available for relocation', available: true },
                   { status: 'Full-time employment', available: true }
-                ].map((item, index) => (
+                ].map((item) => (
                   <div key={item.status} className="flex items-center text-slate-300">
                     <span className={`w-3 h-3 rounded-full mr-3 shadow-sm ${
                       item.available ? 'bg-gradient-to-r from-emerald-400 to-green-400 shadow-emerald-400/50' : 'bg-gradient-to-r from-red-400 to-rose-400 shadow-red-400/50'

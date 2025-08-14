@@ -234,7 +234,7 @@ export default function ClientLayout({
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap justify-center gap-3 mb-8"
           >
-            {['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'AI/ML', 'Node.js'].map((tech, index) => (
+            {['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'AI/ML', 'Node.js'].map((tech) => (
               <span
                 key={tech}
                 className="px-3 py-1 bg-gray-800/50 text-gray-400 text-sm rounded-full border border-gray-700/50 hover:border-violet-500/30 hover:text-violet-300 transition-all duration-300"
