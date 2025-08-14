@@ -258,10 +258,10 @@ export default function ClientLayout({
               
               <div className="flex items-center space-x-6">
                 <a
-                  href="mailto:junior.gheban7@gmail.com"
+                  href="mailto:ghebanionutjohnjunior@gmail.com"
                   className="text-gray-500 hover:text-violet-400 transition-colors duration-300 text-sm"
                 >
-                  junior.gheban7@gmail.com
+                  ghebanionutjohnjunior@gmail.com
                 </a>
                 <div className="w-px h-4 bg-gray-700" />
                 <a

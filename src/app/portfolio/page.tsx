@@ -2,32 +2,22 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function PortfolioPage() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const projects = [
     {
-      title: 'AI-Powered Crypto Trading Bot',
-      description: 'Advanced trading bot using AI technology to analyze crypto markets, detect patterns, and make intelligent decisions to maximize profits. Features continuous learning algorithms and optimized trading strategies.',
-      longDescription: 'This sophisticated trading system leverages machine learning algorithms to process vast amounts of market data in real-time. The bot employs neural networks for pattern recognition, sentiment analysis from social media, and technical indicators to make informed trading decisions. Built with Python, TensorFlow, and integrated with major crypto exchanges via APIs.',
-      tech: ['AI/ML', 'Python', 'TensorFlow', 'Crypto APIs', 'Neural Networks', 'Real-time Processing'],
+      title: 'VoxaSales AI',
+      description: 'Comprehensive AI-powered SaaS platform for sales teams with multi-role architecture (Admin/Manager/Agent), real-time call assistance, and integrated CRM management.',
+      longDescription: 'VoxaSales AI is a complete sales automation ecosystem featuring role-based access control, integrated softphone functionality, live AI assistance during calls, and comprehensive analytics. The platform serves three distinct user types: Admins for system management, Managers for team oversight, and Agents for direct sales support. Features include real-time transcription, contextual client memory, intelligent response suggestions, post-call analytics, and seamless CRM integration with major platforms.',
+      tech: ['GPT-4 Turbo', 'Google Cloud Speech-to-Text', 'React', 'WebSocket', 'Firebase', 'GDPR Compliance'],
       status: 'In Development',
-      category: 'AI & Trading',
-      image: '🤖',
-      progress: 75,
-      metrics: { accuracy: '87%', profit: '+34%', trades: '1,247' }
-    },
-    {
-      title: 'Entrepreneurial Education Platform',
-      description: 'Interactive web platform and mobile app ecosystem where young people learn entrepreneurship through dynamic lessons, tests, and practical projects. Users can choose their area of interest and develop real business ideas.',
-      longDescription: 'A comprehensive educational ecosystem featuring gamified learning experiences, mentorship connections, and real-world project simulations. The platform includes virtual business incubators, peer collaboration tools, and industry expert feedback systems. Built with modern web technologies ensuring scalability and accessibility.',
-      tech: ['React', 'Next.js', 'React Native', 'Node.js', 'PostgreSQL', 'AWS'],
-      status: 'In Development',
-      category: 'EdTech',
-      image: '🎓',
-      progress: 60,
-      metrics: { users: '2,500+', courses: '150+', completion: '89%' }
+      category: 'AI & SaaS',
+      image: '🎯',
+      progress: 65,
+      metrics: { accuracy: '95%', response_time: '<1s', integrations: '4+' }
     },
     {
       title: 'JUNIOR IT TECH HUB SRL',
@@ -38,7 +28,7 @@ export default function PortfolioPage() {
       category: 'Business',
       image: '🏢',
       progress: 100,
-      metrics: { employees: '8+', projects: '25+', clients: '15+' }
+      metrics: { employees: '2', projects: '2', clients: '2' }
     },
     {
       title: 'Advanced Portfolio Website',
@@ -442,8 +432,15 @@ export default function PortfolioPage() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className="px-4 py-2 border border-gray-700/60 text-gray-300 rounded-lg hover:border-violet-500/30 hover:text-violet-400 transition-colors"
+                      disabled={project.title !== 'VoxaSales AI'}
                     >
-                      View Details
+                      {project.title === 'VoxaSales AI' ? (
+                        <Link href="/portfolio/voxasales-ai" className="block w-full h-full">
+                          View Details
+                        </Link>
+                      ) : (
+                        <span className="opacity-50">View Details</span>
+                      )}
                     </motion.button>
                   </div>
                 </div>

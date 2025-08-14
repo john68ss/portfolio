@@ -22,8 +22,8 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-6 py-20">
-          <div className="text-center max-w-6xl mx-auto">
+        <section className="min-h-screen flex items-start justify-center px-6 pt-12 pb-20">
+          <div className="text-center max-w-6xl mx-auto mt-8">
             {/* Enhanced floating 3D scene */}
             <div className="mb-12 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 via-purple-600/20 to-indigo-600/20 blur-3xl" />
