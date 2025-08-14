@@ -21,11 +21,11 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="min-h-screen flex items-start justify-center px-6 pt-12 pb-20">
-          <div className="text-center max-w-6xl mx-auto mt-8">
+        <section className="min-h-screen flex items-start justify-center px-6 pt-8 pb-16">
+          <div className="text-center max-w-4xl mx-auto mt-6">
             {/* Enhanced floating 3D scene */}
-            <div className="mb-12 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 via-purple-600/20 to-indigo-600/20 blur-3xl" />
+            <div className="mb-8 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-600/15 via-purple-600/15 to-indigo-600/15 blur-2xl" />
               <Scene3D />
             </div>
 
@@ -37,41 +37,40 @@ export default function Home() {
               transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
             >
               {/* Compact glow effects */}
-              <div className="absolute -inset-3 bg-gradient-to-r from-violet-600/20 via-purple-600/25 to-indigo-600/20 rounded-[36px] opacity-40 group-hover:opacity-60 blur-2xl transition-all duration-700 animate-pulse" style={{ animationDuration: '4s' }} />
-              <div className="absolute -inset-2 bg-gradient-to-r from-violet-500/20 via-purple-500/25 to-indigo-500/20 rounded-[32px] opacity-50 group-hover:opacity-70 blur-xl transition-all duration-500" />
-              <div className="absolute -inset-1 bg-gradient-to-r from-violet-400/15 via-purple-400/20 to-indigo-400/15 rounded-[28px] opacity-30 group-hover:opacity-50 blur-lg transition-all duration-300" />
+              <div className="absolute -inset-2 bg-gradient-to-r from-violet-600/15 via-purple-600/20 to-indigo-600/15 rounded-[24px] opacity-40 group-hover:opacity-60 blur-xl transition-all duration-700 animate-pulse" style={{ animationDuration: '4s' }} />
+              <div className="absolute -inset-1 bg-gradient-to-r from-violet-500/15 via-purple-500/20 to-indigo-500/15 rounded-[20px] opacity-50 group-hover:opacity-70 blur-lg transition-all duration-500" />
               
               {/* Premium main glass card */}
-              <div className="relative bg-gradient-to-br from-gray-900/95 via-slate-800/90 to-gray-900/95 backdrop-blur-3xl rounded-[32px] border border-white/20 shadow-[0_32px_64px_rgba(0,0,0,0.6)] overflow-hidden group-hover:border-white/30 transition-all duration-500">
+              <div className="relative bg-gradient-to-br from-gray-900/95 via-slate-800/90 to-gray-900/95 backdrop-blur-3xl rounded-[20px] border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden group-hover:border-white/30 transition-all duration-500">
                 {/* Animated premium border gradient */}
-                <div className="absolute inset-0 rounded-[32px] p-[2px] bg-gradient-to-r from-violet-500/60 via-purple-500/60 to-indigo-500/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                  <div className="bg-gradient-to-br from-gray-900/98 via-slate-800/95 to-gray-900/98 rounded-[30px] h-full w-full" />
+                <div className="absolute inset-0 rounded-[20px] p-[1px] bg-gradient-to-r from-violet-500/60 via-purple-500/60 to-indigo-500/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                  <div className="bg-gradient-to-br from-gray-900/98 via-slate-800/95 to-gray-900/98 rounded-[19px] h-full w-full" />
                 </div>
                 
                 {/* Subtle background patterns */}
-                <div className="absolute inset-0 opacity-20">
-                  <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-violet-500/30 to-transparent rounded-full blur-2xl group-hover:scale-125 transition-transform duration-1000" />
-                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-indigo-500/30 to-transparent rounded-full blur-2xl group-hover:scale-125 transition-transform duration-1000" />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-xl group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 opacity-15">
+                  <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-violet-500/30 to-transparent rounded-full blur-xl group-hover:scale-125 transition-transform duration-1000" />
+                  <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-indigo-500/30 to-transparent rounded-full blur-xl group-hover:scale-125 transition-transform duration-1000" />
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-lg group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 
                 {/* Premium mesh pattern overlay */}
-                <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_25%_25%,rgba(255,255,255,0.15),transparent_50%),radial-gradient(circle_at_75%_75%,rgba(139,92,246,0.1),transparent_50%)]" />
+                <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_25%_25%,rgba(255,255,255,0.15),transparent_50%),radial-gradient(circle_at_75%_75%,rgba(139,92,246,0.1),transparent_50%)]" />
                 
                 {/* Optimized content container */}
-                <div className="relative z-20 p-6 md:p-8 lg:p-12 text-center">
+                <div className="relative z-20 p-4 md:p-6 lg:p-8 text-center">
                   {/* Compact status indicator */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8, y: 30 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-                    className="inline-flex items-center px-4 py-2 mb-6 bg-gradient-to-r from-emerald-500/30 via-cyan-500/25 to-teal-500/30 backdrop-blur-2xl rounded-full border border-emerald-400/50 shadow-xl hover:shadow-emerald-500/40 transition-all duration-500 group-hover:scale-105"
+                    className="inline-flex items-center px-3 py-1.5 mb-4 bg-gradient-to-r from-emerald-500/30 via-cyan-500/25 to-teal-500/30 backdrop-blur-2xl rounded-full border border-emerald-400/50 shadow-xl hover:shadow-emerald-500/40 transition-all duration-500 group-hover:scale-105"
                   >
                     <div className="relative flex items-center">
-                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse shadow-lg shadow-emerald-400/60" />
-                      <div className="absolute w-2 h-2 bg-emerald-300 rounded-full mr-3 animate-ping opacity-75" />
+                      <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 animate-pulse shadow-lg shadow-emerald-400/60" />
+                      <div className="absolute w-1.5 h-1.5 bg-emerald-300 rounded-full mr-2 animate-ping opacity-75" />
                     </div>
-                    <span className="text-emerald-300 font-medium text-sm tracking-wide">Available for Elite Projects</span>
+                    <span className="text-emerald-300 font-medium text-xs tracking-wide">Available for Elite Projects</span>
                   </motion.div>
 
                   {/* Optimized hero text */}
@@ -79,11 +78,11 @@ export default function Home() {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
-                    className="space-y-6"
+                    className="space-y-4"
                   >
                     {/* Appropriately sized name */}
                     <div className="relative">
-                      <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight">
+                      <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black leading-tight tracking-tight">
                         <span className="bg-gradient-to-r from-white via-violet-100 to-indigo-100 bg-clip-text text-transparent filter drop-shadow-2xl hover:from-violet-200 hover:via-purple-200 hover:to-indigo-200 transition-all duration-700 relative z-10">
                           Ionut John Junior
                         </span>
@@ -93,14 +92,14 @@ export default function Home() {
                         </span>
                       </h1>
                       {/* Subtle text glow effect */}
-                      <div className="absolute inset-0 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight opacity-15 blur-sm bg-gradient-to-r from-violet-500 to-indigo-500 bg-clip-text text-transparent -z-10 scale-105" />
+                      <div className="absolute inset-0 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black leading-tight tracking-tight opacity-10 blur-sm bg-gradient-to-r from-violet-500 to-indigo-500 bg-clip-text text-transparent -z-10 scale-105" />
                     </div>
 
                     {/* Compact role section */}
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                       {/* Compact role badges */}
                       <motion.div 
-                        className="flex flex-wrap items-center justify-center gap-3 mb-6"
+                        className="flex flex-wrap items-center justify-center gap-2 mb-4"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 1.4 }}

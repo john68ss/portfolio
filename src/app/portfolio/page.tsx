@@ -304,18 +304,18 @@ export default function PortfolioPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative z-10 pt-32 pb-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative z-10 pt-20 pb-12 px-6">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-12"
           >
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-gray-100 via-violet-200 to-purple-300 bg-clip-text text-transparent tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-100 via-violet-200 to-purple-300 bg-clip-text text-transparent tracking-tight">
               Portfolio
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Innovative projects combining{' '}
               <span className="text-violet-400 font-semibold">AI technology</span>,{' '}
               <span className="text-purple-400 font-semibold">full-stack development</span>, and{' '}
@@ -327,7 +327,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Projects Section */}
-      <section className="relative z-10 py-20 px-6">
+      <section className="relative z-10 py-12 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

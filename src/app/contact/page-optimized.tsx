@@ -36,8 +36,8 @@ export default function ContactPage() {
   const contactInfo = [
     {
       label: 'Email',
-      value: 'junior.gheban7@gmail.com',
-      href: 'mailto:junior.gheban7@gmail.com',
+      value: 'ghebanionutjohnjunior@gmail.com',
+      href: 'mailto:ghebanionutjohnjunior@gmail.com',
       icon: '📧',
       description: 'Drop me a line anytime'
     },
